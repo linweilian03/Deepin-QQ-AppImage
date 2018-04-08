@@ -1,0 +1,5 @@
+# Deepin-QQ-AppImage
+运行库中的脚本，可以直接制作一个Deepin-QQ的AppImage。
+要成功运行Deepin-QQ的AppImage，你需要安装32位的支持。且由于ubuntu支持unprivileged_userns_clone，所以该AppImage可以通过unsahre在ubuntu没有性能损失地运行。
+而如Debian和Arch默认关闭unprivileged_userns_clone，本AppImage将使用proot代替unsahre，会有性能损失。当然，你也可以手动开启unprivileged_userns_clone。
+通过命令sudo sysctl kernel.unprivileged_userns_clone=1。
