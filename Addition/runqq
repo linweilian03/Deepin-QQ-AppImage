@@ -1,0 +1,25 @@
+#!/bin/bash
+HERE=$(cd "$(dirname "$0")";pwd)
+
+export PATH="${HERE}"/usr/bin/:"${PATH}"
+export LD_LIBRARY_PATH="$HERE"/usr/lib:"$HERE"/usr/lib/i386-linux-gnu:"$HERE"/usr/lib/i386-linux-gnu/deepin-wine:$LD_LIBRARY_PATH
+export XDG_DATA_DIRS="${HERE}"/usr/share/:"${XDG_DATA_DIRS}"
+export GSETTINGS_SCHEMA_DIR="${HERE}"/usr/share/glib-2.0/schemas/:"${GSETTINGS_SCHEMA_DIR}"
+export WINEDEBUG=-all
+export WINELOADER="${HERE}"/usr/lib/deepin-wine/wine
+
+mount --bind /usr/lib $HERE/Temp
+$HERE/usr/bin/unionfs-fuse -o use_ino,nonempty,uid=$UID $HERE/usr/lib/=RO:$HERE/Temp=RO /usr/lib/ #这两步解决依赖问题，特别是对于路径被硬编码
+
+
+function finish {
+  echo "Cleaning up"
+  killall $HERE/usr/bin/unionfs-fuse
+}
+trap finish EXIT
+
+export WINEPREFIX="$RW_DATADIR"
+"${HERE}"/usr/lib/deepin-wine/wine "c:\\Program Files\\Tencent\\QQ\\Bin\\QQ.exe" "$@"
+while pgrep "QQ.exe" > /dev/null ; do sleep 5 ; echo "Waiting A" ; done
+while pgrep "QQ.exe" > /dev/null ; do sleep 5 ; echo "Waiting B" ; done
+	
