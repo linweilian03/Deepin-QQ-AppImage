@@ -21,15 +21,6 @@ mkdir -p AppDir/Temp
 rm AppDir/opt/deepinwine/apps/Deepin-QQ/files.7z
 
 # Add some run script to Appdir
-
-
-
-
-# Use Appimagetool to produce the appimage
-wget -c "https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage"
-chmod +x appimagetool-x86_64.AppImage
-ARCH=x86_64 ./appimagetool-x86_64.AppImage AppDir/ 
-
 wget -c -p AppDir/ https://github.com/linweilian03/Deepin-QQ-AppImage/releases/download/v1.0/AppRun 
 wget -c -p AppDir/ https://github.com/linweilian03/Deepin-QQ-AppImage/releases/download/v1.0/deepinqq.desktop 
 wget -c -p AppDir/ https://github.com/linweilian03/Deepin-QQ-AppImage/releases/download/v1.0/proot-130 
@@ -38,3 +29,11 @@ wget -c -p AppDir/ https://github.com/linweilian03/Deepin-QQ-AppImage/releases/d
 wget -c -p AppDir/ https://github.com/linweilian03/Deepin-QQ-AppImage/releases/download/v1.0/runqq-proot 
 
 chmod +x AppDir/AppRun AppDir/proot-130 AppDir/runqq AppDir/runqq-proot
+
+
+
+
+# Use Appimagetool to produce the appimage
+wget -c "https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage"
+chmod +x appimagetool-x86_64.AppImage
+ARCH=x86_64 ./appimagetool-x86_64.AppImage AppDir/ 
