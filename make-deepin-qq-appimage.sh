@@ -21,12 +21,12 @@ mkdir -p AppDir/Temp
 rm AppDir/opt/deepinwine/apps/Deepin-QQ/files.7z
 
 # Add some run script to Appdir
-wget -c -p AppDir/ https://github.com/linweilian03/Deepin-QQ-AppImage/releases/download/v1.0/AppRun 
-wget -c -p AppDir/ https://github.com/linweilian03/Deepin-QQ-AppImage/releases/download/v1.0/deepinqq.desktop 
-wget -c -p AppDir/ https://github.com/linweilian03/Deepin-QQ-AppImage/releases/download/v1.0/proot-130 
-wget -c -p AppDir/ https://github.com/linweilian03/Deepin-QQ-AppImage/releases/download/v1.0/runqq
-wget -c -p AppDir/ https://github.com/linweilian03/Deepin-QQ-AppImage/releases/download/v1.0/QQ.png 
-wget -c -p AppDir/ https://github.com/linweilian03/Deepin-QQ-AppImage/releases/download/v1.0/runqq-proot 
+wget -c -P AppDir/ https://github.com/linweilian03/Deepin-QQ-AppImage/releases/download/v1.0/AppRun 
+wget -c -P AppDir/ https://github.com/linweilian03/Deepin-QQ-AppImage/releases/download/v1.0/deepinqq.desktop 
+wget -c -P AppDir/ https://github.com/linweilian03/Deepin-QQ-AppImage/releases/download/v1.0/proot-130 
+wget -c -P AppDir/ https://github.com/linweilian03/Deepin-QQ-AppImage/releases/download/v1.0/runqq
+wget -c -P AppDir/ https://github.com/linweilian03/Deepin-QQ-AppImage/releases/download/v1.0/QQ.png 
+wget -c -P AppDir/ https://github.com/linweilian03/Deepin-QQ-AppImage/releases/download/v1.0/runqq-proot 
 
 chmod +x AppDir/AppRun AppDir/proot-130 AppDir/runqq AppDir/runqq-proot
 
