@@ -10,7 +10,7 @@ wget -c http://packages.deepin.com/deepin/pool/non-free/d/deepin-wine/deepin-lib
 wget -c http://packages.deepin.com/deepin/pool/non-free/d/deepin-wine/deepin-wine32-preloader_2.18-5_i386.deb
 wget -c http://packages.deepin.com/deepin/pool/non-free/d/deepin-wine/deepin-wine32_2.18-5_i386.deb
 wget -c http://packages.deepin.com/deepin/pool/non-free/d/deepin-wine/deepin-wine_2.18-5_all.deb
-wgetc -c http://packages.deepin.com/deepin/pool/non-free/d/deepin-wine-helper/deepin-wine-helper_1.0deepin32_i386.deb
+wget -c http://packages.deepin.com/deepin/pool/non-free/d/deepin-wine-helper/deepin-wine-helper_1.0deepin32_i386.deb
 wget -c http://packages.deepin.com/deepin/pool/non-free/d/deepin-wine-uninstaller/deepin-wine-uninstaller_0.1deepin2_i386.deb
 wget -c http://packages.deepin.com/deepin/pool/non-free/u/udis86/udis86_1.72-2_i386.deb
 wget -c http://mirrors.edge.kernel.org/ubuntu/pool/universe/u/unionfs-fuse/unionfs-fuse_1.0-1ubuntu2_amd64.deb
