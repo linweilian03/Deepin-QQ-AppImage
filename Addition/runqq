@@ -11,6 +11,7 @@ export WINELOADER="${HERE}"/usr/lib/deepin-wine/wine
 mount --bind /usr/lib $HERE/Temp
 $HERE/usr/bin/unionfs-fuse -o use_ino,nonempty,uid=$UID $HERE/usr/lib/=RO:$HERE/Temp=RO /usr/lib/ #这两步解决依赖问题，特别是对于路径被硬编码
 
+ln -s /usr/share/fonts/* $HERE/Deepin-QQ/drive_c/windows/Fonts >/dev/null 2>&1 #解决字体问题，同时不打印信息
 
 function finish {
   echo "Cleaning up"
