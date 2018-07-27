@@ -3,6 +3,10 @@ HERE=$(cd "$(dirname "$0")";pwd)
 
 VERSION=20180408
 echo "QQ appimage was made in $VERSION"
+echo "QQ appimage was made in $VERSION"
+echo "在UBUNTU18.04需要安装32位支持库，通过以下命令即可安装 sudo apt install libgl1-mesa-glx:i386  libfreetype6:i386"
+echo "为保证最佳的使用体验，正确使用托盘图标功能，Ubuntu18.04的GNOME桌面应安装topsicons插件。如果觉得字体奇怪，请给系统安装宋体字体，或者通过以下方式安装：将宋体文件simsun.ttf挎到 $HOME/.DeepinQQ.Appimage/drive_c/windows/Fonts目录下（该目录可自行创建）。"
+
 
 if [ $EUID -eq 0 ]; then
     echo "Please not run QQ as root. Please run it without sudo"
