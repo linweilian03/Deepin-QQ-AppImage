@@ -1,7 +1,7 @@
 #!/bin/bash
 HERE=$(cd "$(dirname "$0")";pwd)
 
-VERSION=20180408
+VERSION=20180727
 echo "QQ appimage was made in $VERSION"
 echo "QQ appimage was made in $VERSION"
 echo "在UBUNTU18.04需要安装32位支持库，通过以下命令即可安装 sudo apt install libgl1-mesa-glx:i386  libfreetype6:i386"
